@@ -1,7 +1,6 @@
 import React from'react';
 import ReactDOM from'react-dom/client';    
-    
-    
+   
 //JSX - Its not html , it is html-like or XML-like syntax
 // JSX is first transpiled before it reahces JS - Parcel - Babel is resposible for this
 // JSX => React.createElement => ReactElement-JS Obeject => HTMLElement(Render)
