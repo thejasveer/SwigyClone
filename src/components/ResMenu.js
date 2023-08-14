@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
+ 
 import { useParams } from "react-router-dom";
 import {Shimmer} from "./Shimmer";
-import { GetObjData } from "./../utils/helper";
+ 
+import useRestuarantMenu from "../utils/useRestuarantMenu";
+
+
 const ResMenu = ()=>{
 
-    const [resInfo,setResinfo] = useState(null)
-
-useEffect(()=>{
-    fetchRes();
-},[]);
-let {id}= useParams();
-const fetchRes = async ()=>{
- 
-   
-    let data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`);
-    json = await data?.json();
+    let {id}= useParams();
+    const resInfo = useRestuarantMenu(id)
     
-    setResinfo(json.data);
-   
-     
-} 
+
  if(resInfo===null)
  {
     return <Shimmer/>
@@ -27,9 +18,9 @@ const fetchRes = async ()=>{
     const { name,cuisines,costForTwoMessage } = resInfo?.cards[0]?.card?.card?.info;
     const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card;
 
-    console.log(itemCards);
+    console.log(resInfo);
    
-
+ 
 return (
 <div>
 <h1>{name}</h1>

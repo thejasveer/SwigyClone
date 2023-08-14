@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 
-
+import useOnlineStatus from "../utils/usOnlineStatus";
 const Body = ()=>{
+
+
 
     const [resList,setResList] = useState([]);
     const [filteredRes,setFilteredResList]=useState([])
     const [searchInput,setSearchInput] = useState("");
+
     useEffect(()=>{
        fetchData();
     },[]);
@@ -22,7 +25,11 @@ const Body = ()=>{
          
     }
     
-    
+    const onlineStatus = useOnlineStatus();
+
+    if(onlineStatus===false){
+      return <h1>Looks like you are offline</h1>
+    }
 
 
     return (resList.length===0)? <Shimmer/> : (
@@ -30,6 +37,7 @@ const Body = ()=>{
       <div className='filter'>
         <div className='search'>
             <input placeholder="Search" type='text' className="search" value={searchInput} onChange={(e)=>{
+
                 setSearchInput(e.target.value)
                 filteredList = resList.filter((res)=>{
                     return  res.data.name.toLowerCase().includes(searchInput.toLowerCase());
