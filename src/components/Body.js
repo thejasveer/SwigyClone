@@ -18,7 +18,7 @@ const Body = ()=>{
     const fetchData = async ()=>{
         const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING");
         const {data} = await data1.json();
-        const resListData =  data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        const resListData = await data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
       
         setResList(resListData)
         setFilteredResList(resListData)
@@ -58,11 +58,11 @@ const Body = ()=>{
       {
           // resList.map(res=> <ResCard resData={res}/>)
           filteredRes.map((res)=>(
-            <Link to="/res/{res?.info.id}"  key={res?.info.id}> 
+            <div key={res?.info.id}> 
           
               {res.info.avgRating>4 ? <OpenRes resData={res?.info}/>:<ResCard resData={res?.info}/>}
               
-              </Link> 
+              </div> 
           ))
       }
       

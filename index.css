@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .app{
     display: flex;
     flex-direction: column;
@@ -49,7 +54,7 @@
     border-radius: 10px;
 }
 .res_card:hover {
-    border: 1px solid gray;
+    outline: 1px solid gray;
     cursor:pointer
 }
 .res_card img{

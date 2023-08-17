@@ -5,9 +5,9 @@ const ResCard = (props)=>{
     const {name,cuisines,avgRating,costForTwo}= resData;
  return (
     <Link to={  `/res/${resData.id}`} >
-           <div className='res_card'>
+           <div className='res_card bg-black'>
         <img src={CDN_URL+resData.cloudinaryImageId} />
-        <h3 className='title'>{name}</h3>
+        <h3 className='title text-xl text-black'>{name}</h3>
         <h4>{cuisines.join(', ')}</h4>
         <h4>{avgRating} ⭐️ </h4>
         <h4>{costForTwo}</h4>
