@@ -2,17 +2,22 @@ import {CDN_URL} from '../utils/constants';
 import { Link } from "react-router-dom";
 const ResCard = (props)=>{ 
     const {resData}= props;
-    const {name,cuisines,avgRating,costForTwo}= resData;
+    let {name,cuisines,avgRating,sla}= resData;
+   
+    cuisines = cuisines.join(", ").substring(0, 20);
+    cuisines = (cuisines.length==20)?cuisines.concat("..."):cuisines;
  return (
     <Link to={  `/res/${resData.id}`} >
-           <div className='res_card bg-black'>
-        <img src={CDN_URL+resData.cloudinaryImageId} />
+     <div className=' bg-gray-200 w-52 h-60 p-2 rounded-lg flex flex-col justify-between'>
+        <img className='rounded-lg' src={CDN_URL+resData.cloudinaryImageId} />
         <h3 className='title text-xl text-black'>{name}</h3>
-        <h4>{cuisines.join(', ')}</h4>
+        <h4>{cuisines}</h4>
+        <div className='flex justify-between mb-0'>
         <h4>{avgRating} ⭐️ </h4>
-        <h4>{costForTwo}</h4>
-        <p></p>
-    </div>
+        <h4>⏰ {sla.deliveryTime} mins</h4>
+        </div>
+    
+        </div>
     </Link>
  
  );

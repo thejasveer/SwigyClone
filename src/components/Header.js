@@ -6,9 +6,23 @@ import useOnlineStatus from "../utils/usOnlineStatus";
 
 
  const Header = ()=>{
-    let [btnName,setBtnName] =useState("login");
-    const onlineStatus = useOnlineStatus();
-    const {loggedInUser} = useContext(UserContext);
+    let [btnName,setBtnName] =useState("Login");
+    let [loggedIn,setLoggedIn] =useState(false);
+     const onlineStatus = useOnlineStatus();
+    const {loggedInUser,setUserName} = useContext(UserContext);
+  
+    const loginNewUser = ()=>{
+     let username = prompt("Enter your username","")
+     setUserName(username);
+     setLoggedIn(true)
+     setBtnName("Logout")
+    }
+    const logoutUser = ()=>{
+      
+      setUserName("");
+      setLoggedIn(false)
+      setBtnName("Login")
+     }
 
     return (
       <div className='header'>
@@ -24,8 +38,17 @@ import useOnlineStatus from "../utils/usOnlineStatus";
               <li><Link to="/about">About us</Link></li>
               <li ><Link to="/contact">Contact US</Link></li>
               <li>Cart</li>
-               <li><button className="auth" onClick={()=>{(btnName==='login')?setBtnName("logout"):setBtnName("login")}}>{btnName}</button></li>
-              <li>{loggedInUser}</li>
+              {/* {loggedIn?<li>{loggedInUser}</li>:""} */}
+              {/* <li><button className="auth" onClick={loginNewUser}>{btnName}</button>
+                </li> */}
+               <li><button className="auth" onClick={()=>{
+                (loggedIn)
+                ?logoutUser()
+                :loginNewUser()}
+                }>{loggedIn?(loggedInUser+","):""}{btnName}</button>
+                </li>
+                
+              
               </ul>
           </div>
           </div>

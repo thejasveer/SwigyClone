@@ -9,18 +9,25 @@ import  About   from './components/About';
 import {lazy,Suspense} from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Shimmer } from './components/Shimmer';
- 
+import UserContext from './utils/UserContext'; 
+import { useState } from 'react';
+
 const Contact = lazy(()=> import('./components/Contact'))
 const Error = lazy(()=> import('./components/Error'))
 const ResMenu = lazy(()=> import('./components/ResMenu'))
- 
+
     
 const AppLayout = ()=>{
+    const [username,setUserName] = useState("Jasveer");
+
     return (
+        <UserContext.Provider value={{loggedInUser:username,setUserName}}>
+        
         <div className='app'>
             <Header/>
             <Outlet />
         </div>
+        </UserContext.Provider>
     )
 }
 

@@ -16,12 +16,12 @@ const Body = ()=>{
        fetchData();
     },[]);
     const fetchData = async ()=>{
-        const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING");
-        const {data} = await data1.json();
-        const resListData = await data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-      
-        setResList(resListData)
-        setFilteredResList(resListData)
+        const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING").
+        then((response) =>  response.json() ).then(({data})=>{
+          const resListData = data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+          setResList(resListData)
+          setFilteredResList(resListData)
+        });
          
     }
     
@@ -30,7 +30,7 @@ const Body = ()=>{
     if(onlineStatus===false){
       return <h1>Looks like you are offline</h1>
     }
-
+    console.log(resList)
 
     return (resList.length===0)? <Shimmer/> : (
   <div className='body'>
@@ -39,10 +39,13 @@ const Body = ()=>{
             <input placeholder="Search" type='text' className="search" value={searchInput} onChange={(e)=>{
 
                 setSearchInput(e.target.value)
+ 
                 filteredList = resList.filter((res)=>{
-                    return  res.data.name.toLowerCase().includes(searchInput.toLowerCase());
+  
+                    return (e.target.value.length=0)?resList: res?.info?.name.toLowerCase().includes(searchInput.toLowerCase());
                     
                   });
+                  
                   setFilteredResList(filteredList)
                 
                 }}/>
