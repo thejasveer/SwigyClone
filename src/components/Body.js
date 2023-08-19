@@ -30,8 +30,7 @@ const Body = ()=>{
     if(onlineStatus===false){
       return <h1>Looks like you are offline</h1>
     }
-    console.log(resList)
-
+   
     return (resList.length===0)? <Shimmer/> : (
   <div className='body'>
       <div className='filter'>
@@ -39,13 +38,9 @@ const Body = ()=>{
             <input placeholder="Search" type='text' className="search" value={searchInput} onChange={(e)=>{
 
                 setSearchInput(e.target.value)
- 
-                filteredList = resList.filter((res)=>{
-  
-                    return (e.target.value.length=0)?resList: res?.info?.name.toLowerCase().includes(searchInput.toLowerCase());
-                    
-                  });
-                  
+                
+                filteredList =(e.target.value.length>0)? resList.filter((res)=> res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())):resList;
+                
                   setFilteredResList(filteredList)
                 
                 }}/>
