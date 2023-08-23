@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const ResCard = (props)=>{ 
     const {resData}= props;
     let {name,cuisines,avgRating,sla}= resData;
-   
+    name = name.substring(0, 20);
+    name = (name.length==20)?name.concat("..."):name;
     cuisines = cuisines.join(", ").substring(0, 20);
     cuisines = (cuisines.length==20)?cuisines.concat("..."):cuisines;
  return (

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import useOnlineStatus from "../utils/usOnlineStatus";
@@ -22,7 +23,9 @@ import useOnlineStatus from "../utils/usOnlineStatus";
       setUserName("");
       setLoggedIn(false)
       setBtnName("Login")
-     }
+    }
+
+     const cart  = useSelector((store)=> store.cart.items)
 
     return (
       <div className='header'>
@@ -37,7 +40,7 @@ import useOnlineStatus from "../utils/usOnlineStatus";
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About us</Link></li>
               <li ><Link to="/contact">Contact US</Link></li>
-              <li>Cart</li>
+              <li> <Link to="/cart">🛒  ({cart.length})</Link></li>
               {/* {loggedIn?<li>{loggedInUser}</li>:""} */}
               {/* <li><button className="auth" onClick={loginNewUser}>{btnName}</button>
                 </li> */}

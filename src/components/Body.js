@@ -35,7 +35,7 @@ const Body = ()=>{
   <div className='body'>
       <div className='filter'>
         <div className='search'>
-            <input placeholder="Search" type='text' className="search" value={searchInput} onChange={(e)=>{
+            <input className="border bg-gray-400" placeholder="Search" type='text' className="search" value={searchInput} onChange={(e)=>{
 
                 setSearchInput(e.target.value)
                 
