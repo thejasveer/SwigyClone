@@ -1,20 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CDN_URL } from "../utils/constants";
 import { removeItem } from "../utils/cartSlice";
+import EmptyCart from "./EmptyCart";
+import { Link } from "react-router-dom";
+
 const Cart = ()=>{
 
 
     const cartItems = useSelector((store)=> store.cart.items)
+    const totalAmount = useSelector((store)=> store.cart.total)
     const dispatch = useDispatch();
 const deleteItem = (index)=>{
 dispatch(removeItem(index));
 }
-
-    return (
+const checkout = ()=>{
+  dispatch(checkout());
+  }
+ return (cartItems.length==0 ? <EmptyCart/>: (
         <div className="relative z-10 " aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
         
         
-      
+     
             <div className="pointer-events-none flex justify-center inset-y-0 right-0 flex w-full pl-10">
              
               <div className="pointer-events-auto w-screen w-1/2 ">
@@ -23,9 +29,7 @@ dispatch(removeItem(index));
                     <div className="flex items-start justify-between">
                       <h2 className="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
                       <div className="ml-3 flex h-7 items-center">
-                        <button type="button" className="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
-                         
-                        </button>
+                        
                       </div>
                     </div>
       
@@ -54,9 +58,11 @@ dispatch(removeItem(index));
 
                                 <div className="flex">
                                     <button type="button"
-                                    onClick={deleteItem(i)}
+                                    onClick={()=>{
+                                      deleteItem(i)
+                                    }}
                                     
-                                    className="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                    className="font-medium  text-indigo-600 hover:text-indigo-500">Remove</button>
                                 </div>
                                 </div>
                             </div>
@@ -72,19 +78,24 @@ dispatch(removeItem(index));
                   <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Subtotal</p>
-                      <p>$262.00</p>
+                      <p>${totalAmount}</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div className="mt-6">
-                      <a href="#" className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                      <button  onClick={()=>{
+                                      checkout(i)
+                                    }}
+                                     className="w-full flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</button>
                     </div>
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <p>
                         or
-                        <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
-                          Continue Shopping
+                        <Link to="/" >
+                      <button type="button" className="ml-2 font-medium text-indigo-600 hover:text-indigo-500">
+                              Continue Shopping
                           <span aria-hidden="true"> &rarr;</span>
-                        </button>
+                      </button>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -92,7 +103,7 @@ dispatch(removeItem(index));
               </div>
             </div>
         
-      </div>
-    )
+         </div>
+    ));
 }
 export default Cart;
