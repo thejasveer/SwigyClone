@@ -9,12 +9,15 @@ const [resInfo,setResInfo] = useState(null);
            
     },[])
 
-    const fetchRes = async ()=>{
+    const fetchRes =  ()=>{
 
-        let data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`);
-        json = await data?.json();
+        let data =  fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`)
+        .then((response) => response.json() ).then(({data})=>{
         
-        setResInfo(json.data);
+        setResInfo(data);
+    
+        });
+        
     
         
     } 

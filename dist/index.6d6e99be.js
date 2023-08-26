@@ -36441,8 +36441,8 @@ var _reselect = require("reselect");
 // src/getDefaultMiddleware.ts
 var _reduxThunk = require("redux-thunk");
 var _reduxThunkDefault = parcelHelpers.interopDefault(_reduxThunk);
-var global = arguments[3];
 var process = require("bae581c48076aa84");
+var global = arguments[3];
 var __extends = undefined && undefined.__extends || function() {
     var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf || ({
@@ -40339,7 +40339,7 @@ exports.default = cartSlice.reducer;
 var _c;
 $RefreshReg$(_c, "MySwal");
 
-},{"@reduxjs/toolkit":"lL1Ef","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","sweetalert2":"1HyFr","sweetalert2-react-content":"7jLQB"}],"1HyFr":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"lL1Ef","sweetalert2":"1HyFr","sweetalert2-react-content":"7jLQB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1HyFr":[function(require,module,exports) {
 /*!
 * sweetalert2 v11.7.27
 * Released under the MIT License.
@@ -44274,7 +44274,7 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-redux":"bdVon","../utils/constants":"hB8jg","../utils/cartSlice":"5RXlr","./EmptyCart":"g24Wj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"g24Wj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"bdVon","../utils/constants":"hB8jg","../utils/cartSlice":"5RXlr","./EmptyCart":"g24Wj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g24Wj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4fcb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -44339,7 +44339,7 @@ $RefreshReg$(_c, "Emptycart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"kOjnw":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kOjnw":[function(require,module,exports) {
 module.exports = require("4f3dd687fa87a621")(require("906b6512f656b005").getBundleURL("fB6cd") + "Contact.78c3f0c5.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
