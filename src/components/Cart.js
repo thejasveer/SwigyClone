@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CDN_URL } from "../utils/constants";
-import { removeItem } from "../utils/cartSlice";
+import { removeItem,checkout } from "../utils/cartSlice";
 import EmptyCart from "./EmptyCart";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Cart = ()=>{
 const deleteItem = (index)=>{
 dispatch(removeItem(index));
 }
-const checkout = ()=>{
+const handleCheckout = ()=>{
   dispatch(checkout());
   }
  return (cartItems.length==0 ? <EmptyCart/>: (
@@ -83,7 +83,7 @@ const checkout = ()=>{
                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div className="mt-6">
                       <button  onClick={()=>{
-                                      checkout(i)
+                                      handleCheckout()
                                     }}
                                      className="w-full flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</button>
                     </div>

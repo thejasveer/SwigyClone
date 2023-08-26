@@ -40266,6 +40266,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
 parcelHelpers.export(exports, "removeItem", ()=>removeItem);
 parcelHelpers.export(exports, "clearCart", ()=>clearCart);
+parcelHelpers.export(exports, "checkout", ()=>checkout);
 var _toolkit = require("@reduxjs/toolkit");
 var _sweetalert2 = require("sweetalert2");
 var _sweetalert2Default = parcelHelpers.interopDefault(_sweetalert2);
@@ -40334,7 +40335,7 @@ const cartSlice = (0, _toolkit.createSlice)({
         }
     }
 });
-const { addItem , removeItem , clearCart  } = cartSlice.actions;
+const { addItem , removeItem , clearCart , checkout  } = cartSlice.actions;
 exports.default = cartSlice.reducer;
 var _c;
 $RefreshReg$(_c, "MySwal");
@@ -43935,8 +43936,8 @@ const Cart = ()=>{
     const deleteItem = (index)=>{
         dispatch((0, _cartSlice.removeItem)(index));
     };
-    const checkout = ()=>{
-        dispatch(checkout());
+    const handleCheckout = ()=>{
+        dispatch((0, _cartSlice.checkout)());
     };
     return cartItems.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
         fileName: "src/components/Cart.js",
@@ -43989,7 +43990,7 @@ const Cart = ()=>{
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                             role: "list",
                                             className: "-my-6 divide-y divide-gray-200",
-                                            children: cartItems.map((item, i1)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                            children: cartItems.map((item, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                                     className: "flex py-6",
                                                     children: [
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44079,7 +44080,7 @@ const Cart = ()=>{
                                                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                                                 type: "button",
                                                                                 onClick: ()=>{
-                                                                                    deleteItem(i1);
+                                                                                    deleteItem(i);
                                                                                 },
                                                                                 className: "font-medium text-indigo-600 hover:text-indigo-500",
                                                                                 children: "Remove"
@@ -44173,7 +44174,7 @@ const Cart = ()=>{
                                     className: "mt-6",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         onClick: ()=>{
-                                            checkout(i);
+                                            handleCheckout();
                                         },
                                         className: "w-full flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700",
                                         children: "Checkout"
