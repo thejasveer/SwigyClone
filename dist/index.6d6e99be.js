@@ -35062,7 +35062,10 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING").then((response)=>response.json()).then(({ data  })=>{
+        const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING", {
+            method: "GET",
+            mode: "no-cors"
+        }).then((response)=>response.json()).then(({ data  })=>{
             const resListData = data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             setResList(resListData);
             setFilteredResList(resListData);
@@ -35073,12 +35076,12 @@ const Body = ()=>{
         children: "Looks like you are offline"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 31,
+        lineNumber: 34,
         columnNumber: 14
     }, undefined);
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 34,
+        lineNumber: 37,
         columnNumber: 34
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -35101,12 +35104,12 @@ const Body = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 38,
+                            lineNumber: 41,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 37,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35118,13 +35121,13 @@ const Body = ()=>{
                         children: "Top Rated Restraunts"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 49,
+                        lineNumber: 52,
                         columnNumber: 10
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 36,
+                lineNumber: 39,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35135,29 +35138,29 @@ const Body = ()=>{
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 61,
+                            lineNumber: 64,
                             columnNumber: 39
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 61,
+                            lineNumber: 64,
                             columnNumber: 70
                         }, undefined)
                     }, res?.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 59,
+                        lineNumber: 62,
                         columnNumber: 13
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 54,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 35,
+        lineNumber: 38,
         columnNumber: 3
     }, undefined);
 };
