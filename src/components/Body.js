@@ -2,8 +2,7 @@ import ResCard, {WithOpenLabel} from "./ResCard";
 import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-
+import axios from "axios";
 import useOnlineStatus from "../utils/usOnlineStatus";
 const Body = ()=>{
 
@@ -17,11 +16,11 @@ const Body = ()=>{
        fetchData();
     },[]);
     const fetchData =  ()=>{
-        const data1 =  axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING"  )
-        .then((response) =>  response )
-        .then(({data})=>{
-          debugger
-          const resListData = data.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        const data1 =  axios.get("http://127.0.0.1:8000/api/get-res").
+        then((res) =>  {
+          let data = res?.data?.data;
+ 
+          const resListData = data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
           setResList(resListData)
           setFilteredResList(resListData)
         });

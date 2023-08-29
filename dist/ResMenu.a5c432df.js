@@ -908,6 +908,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _s = $RefreshSig$();
 const useRestuarantMenu = (id)=>{
     _s();
@@ -916,13 +918,8 @@ const useRestuarantMenu = (id)=>{
         fetchRes();
     }, []);
     const fetchRes = ()=>{
-        let data = fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`, {
-            method: "GET",
-            mode: "no-cors"
-        }).then((response)=>{
-            debugger;
-            response.json();
-        }).then(({ data  })=>{
+        let data = (0, _axiosDefault.default).get("http://127.0.0.1:8000/api/get-res-detail/" + id).then((res)=>{
+            let data = res?.data?.data;
             setResInfo(data);
         });
     };
@@ -936,6 +933,6 @@ exports.default = useRestuarantMenu;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","6KA0i"], null, "parcelRequire4085")
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","axios":"jo6P5"}]},["1xC6H","6KA0i"], null, "parcelRequire4085")
 
 //# sourceMappingURL=ResMenu.a5c432df.js.map

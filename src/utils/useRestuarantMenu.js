@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 const useRestuarantMenu = (id) =>{
 const [resInfo,setResInfo] = useState(null);
     useEffect(()=>{
@@ -11,18 +11,18 @@ const [resInfo,setResInfo] = useState(null);
 
     const fetchRes =  ()=>{
 
-        let data =  fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`, {
-            method: 'GET',
-            mode: 'no-cors'
-          })
-        .then((response) =>{ 
-            debugger
-            response.json() }).then(({data})=>{
-        
+        let data =  axios.get("http://127.0.0.1:8000/api/get-res-detail/"+id).
+        then((res) =>  {
+          let data = res?.data?.data;
         setResInfo(data);
     
-        }); 
+        });
+        
+    
+        
     } 
+
+
     return resInfo;
 }
 
