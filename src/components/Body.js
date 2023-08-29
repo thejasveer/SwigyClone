@@ -16,7 +16,7 @@ const Body = ()=>{
        fetchData();
     },[]);
     const fetchData =  ()=>{
-        const data1 =  axios.get("http://portfolio.wdd12-jasveer.xyz/api/get-res").
+        const data1 =  axios.get("https://portfolio.wdd12-jasveer.xyz/api/get-res").
         then((res) =>  {
           let data = res?.data?.data;
  
