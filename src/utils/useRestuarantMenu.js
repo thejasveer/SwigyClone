@@ -15,17 +15,14 @@ const [resInfo,setResInfo] = useState(null);
             method: 'GET',
             mode: 'no-cors'
           })
-        .then((response) => response.json() ).then(({data})=>{
+        .then((response) =>{ 
+            debugger
+            response.json() }).then(({data})=>{
         
         setResInfo(data);
     
-        });
-        
-    
-        
+        }); 
     } 
-
-
     return resInfo;
 }
 

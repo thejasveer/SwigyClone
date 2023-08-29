@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/thejasveer/React#readme",
   "devDependencies": {
+    "buffer": "^5.7.1",
     "parcel": "^2.8.3",
     "postcss": "^8.4.28",
     "process": "^0.11.10",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",

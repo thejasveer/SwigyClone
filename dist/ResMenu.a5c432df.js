@@ -919,7 +919,10 @@ const useRestuarantMenu = (id)=>{
         let data = fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=${id}&submitAction=ENTER`, {
             method: "GET",
             mode: "no-cors"
-        }).then((response)=>response.json()).then(({ data  })=>{
+        }).then((response)=>{
+            debugger;
+            response.json();
+        }).then(({ data  })=>{
             setResInfo(data);
         });
     };
