@@ -918,7 +918,7 @@ const useRestuarantMenu = (id)=>{
         fetchRes();
     }, []);
     const fetchRes = ()=>{
-        let data = (0, _axiosDefault.default).get("http://127.0.0.1:8000/api/get-res-detail/" + id).then((res)=>{
+        let data = (0, _axiosDefault.default).get("http://portfolio.wdd12-jasveer.xyz/api/get-res-detail/" + id).then((res)=>{
             let data = res?.data?.data;
             setResInfo(data);
         });

@@ -11,7 +11,7 @@ const [resInfo,setResInfo] = useState(null);
 
     const fetchRes =  ()=>{
 
-        let data =  axios.get("http://127.0.0.1:8000/api/get-res-detail/"+id).
+        let data =  axios.get("http://portfolio.wdd12-jasveer.xyz/api/get-res-detail/"+id).
         then((res) =>  {
           let data = res?.data?.data;
         setResInfo(data);

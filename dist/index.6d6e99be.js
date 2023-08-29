@@ -35064,7 +35064,7 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = ()=>{
-        const data1 = (0, _axiosDefault.default).get("http://127.0.0.1:8000/api/get-res").then((res)=>{
+        const data1 = (0, _axiosDefault.default).get("http://portfolio.wdd12-jasveer.xyz/api/get-res").then((res)=>{
             let data = res?.data?.data;
             const resListData = data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             setResList(resListData);
