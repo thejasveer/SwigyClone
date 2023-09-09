@@ -933,6 +933,6 @@ exports.default = useRestuarantMenu;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","axios":"jo6P5"}]},["1xC6H","6KA0i"], null, "parcelRequire4085")
+},{"react":"21dqq","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","6KA0i"], null, "parcelRequire4085")
 
 //# sourceMappingURL=ResMenu.a5c432df.js.map

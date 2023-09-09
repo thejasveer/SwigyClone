@@ -37,9 +37,7 @@ import useOnlineStatus from "../utils/usOnlineStatus";
           <div className='nav_items'>
               <ul >
               <li>Online Status: {onlineStatus?   "🟢": "🔴"}</li>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About us</Link></li>
-              <li ><Link to="/contact">Contact US</Link></li>
+              
               <li> <Link to="/cart">🛒  ({cart.length})</Link></li>
               {/* {loggedIn?<li>{loggedInUser}</li>:""} */}
               {/* <li><button className="auth" onClick={loginNewUser}>{btnName}</button>
