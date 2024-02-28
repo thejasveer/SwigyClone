@@ -1,0 +1,2 @@
+var e=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire4085;e.register("el35P",(function(n,i){var o,r,l,t,a;o=n.exports,Object.defineProperty(o,"__esModule",{value:!0,configurable:!0}),r=n.exports,l="default",t=function(){return d},Object.defineProperty(r,l,{get:t,set:a,enumerable:!0,configurable:!0});var f=e("5aRSq");var d=()=>(0,f.jsx)("div",{children:"Hi i am Contact us"})}));
+//# sourceMappingURL=Contact.c02c3180.js.map
