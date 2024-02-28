@@ -1,0 +1,155 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.app {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.header {
+  height: min-content;
+  border: 1px solid gray;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.logo_container {
+  padding: 3px;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.nav_items {
+  padding-right: 20px;
+}
+
+.nav_items ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav_items ul li {
+  padding: 10px;
+}
+
+.search {
+  justify-content: center;
+  display: flex;
+}
+
+.search input {
+  border: 1px soild gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.res_card {
+  width: 200px;
+  height: auto;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.res_card:hover {
+  cursor: pointer;
+  outline: 1px solid gray;
+}
+
+.res_card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.res_container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.filter-btn {
+  padding: 10px;
+}
+
+.card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 8px #0000001a;
+}
+
+.shimmerBG {
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%) 0 0 / 1200px 100%;
+  animation-name: shimmer;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.media {
+  height: 200px;
+}
+
+.p-32 {
+  padding: 32px;
+}
+
+.title-line {
+  height: 24px;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.content-line {
+  height: 8px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.end {
+  width: 40%;
+}
+
+.m-t-24 {
+  margin-top: 24px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */

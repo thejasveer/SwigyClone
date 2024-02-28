@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: min-content;
+    border: 1px solid gray;
+    border-radius : 10px;
+
+}
+.logo_container{
+    padding:3px;
+}
+
+.logo {
+    
+    width:100px;
+    border-radius: 50%;
+}
+.nav_items{
+    padding-right: 20px;
+}
+.nav_items ul {
+    display:flex;
+   list-style-type: none;
+}
+.nav_items ul li{
+    padding: 10px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+
+}
+.search input{
+    padding: 5px;
+    border:1px soild gray;
+    border-radius: 10px;
+}
+.res_card{
+    width: 200px;
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.res_card:hover {
+    outline: 1px solid gray;
+    cursor:pointer
+}
+.res_card img{
+    width: 100%;
+    border-radius: 10px; 
+    object-fit: contain;
+}
+
+.res_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content:center;
+    padding: 10px;;
+}
+.filter-btn{
+    padding:10px;
+}
+
+.card {
+    position: relative;
+    -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    border-radius: 6px;
+    
+    overflow: hidden;
+    width: 200px;
+    margin: 40px auto;
+  
+  
+
+}
+
+.shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #ddd;
+    background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+    background-size: 1200px 100%;
+}
+
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+    100% {
+        background-position: 1200px 0;
+    }
+}
+  
+    .media {
+    height: 200px;
+}
+
+.p-32 {
+    padding: 32px;
+}
+
+.title-line {
+    height: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 20px;
+}
+
+.content-line {
+    height: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+  
+  .end {
+      width: 40%;
+    }
+.m-t-24 {
+    margin-top: 24px;
+}

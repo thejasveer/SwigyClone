@@ -1,1 +1,0 @@
-{"mappings":"4ZAAA,IAAAA,EAAAC,EAAA,S,IAKAC,EALa,KAEL,EAAAF,EAAAG,KAAC,O,SAAI,sB","sources":["src/components/Contact.js"],"sourcesContent":["const About= () =>{\n    return (\n        <div>Hi i am Contact us</div>\n    )\n}\nexport default About;\n"],"names":["$5aRSq","parcelRequire","$a7056d12e4b6a8a4$export$2e2bcd8739ae039","jsx"],"version":3,"file":"Contact.c02c3180.js.map"}
