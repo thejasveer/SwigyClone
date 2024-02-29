@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import useOnlineStatus from "../utils/usOnlineStatus";
 const Body = ()=>{
-
-
-
     const [resList,setResList] = useState([]);
     const [filteredRes,setFilteredResList]=useState([])
     const [searchInput,setSearchInput] = useState("");
@@ -27,14 +24,15 @@ const Body = ()=>{
           setResList(resListData)
           setFilteredResList(resListData)
         });
-         
     }
 
     const handleSort= (val)=>{
       let sortedData;
+       
         switch (val) {
-          case "relevance":
-            setFilteredResList(resList)
+          case "relevence":
+            sortedData = resList
+       
             break;
           case "deliveryTime":
                 
@@ -62,7 +60,7 @@ const Body = ()=>{
     }
    
     return (resList.length===0)? <Shimmer/> : (
-  <div className='body'>
+          <div className='body'>
       <div className='filter'>
         <div className='flex justify-between pl-20 pr-20'>
             <input className="border rounded-lg border-black p-2  " placeholder="Search" type='text'  value={searchInput} onChange=   {(e)=>{

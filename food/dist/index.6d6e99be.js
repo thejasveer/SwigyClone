@@ -35034,8 +35034,8 @@ const Body = ()=>{
     const handleSort = (val)=>{
         let sortedData;
         switch(val){
-            case "relevance":
-                setFilteredResList(resList);
+            case "relevence":
+                sortedData = resList;
                 break;
             case "deliveryTime":
                 sortedData = resList.sort((a, b)=>a?.info?.sla?.deliveryTime - b?.info?.sla?.deliveryTime);
@@ -35055,12 +35055,12 @@ const Body = ()=>{
         children: "Looks like you are offline"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 61,
+        lineNumber: 59,
         columnNumber: 14
     }, undefined);
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 64,
+        lineNumber: 62,
         columnNumber: 34
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -35082,7 +35082,7 @@ const Body = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 68,
+                            lineNumber: 66,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35109,18 +35109,18 @@ const Body = ()=>{
                                                 d: "M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
                                             }, void 0, false, {
                                                 fileName: "src/components/Body.js",
-                                                lineNumber: 82,
+                                                lineNumber: 80,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/Body.js",
-                                            lineNumber: 81,
+                                            lineNumber: 79,
                                             columnNumber: 27
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 78,
+                                    lineNumber: 76,
                                     columnNumber: 17
                                 }, undefined),
                                 sortActive && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -35136,12 +35136,12 @@ const Body = ()=>{
                                                         children: "Relevance"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Body.js",
-                                                        lineNumber: 88,
+                                                        lineNumber: 86,
                                                         columnNumber: 145
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 88,
+                                                    lineNumber: 86,
                                                     columnNumber: 117
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35153,13 +35153,13 @@ const Body = ()=>{
                                                     checked: selectedSort == "relevence"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 88,
+                                                    lineNumber: 86,
                                                     columnNumber: 175
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Body.js",
-                                            lineNumber: 88,
+                                            lineNumber: 86,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35173,12 +35173,12 @@ const Body = ()=>{
                                                         children: "Delivery Time"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Body.js",
-                                                        lineNumber: 89,
+                                                        lineNumber: 87,
                                                         columnNumber: 152
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 89,
+                                                    lineNumber: 87,
                                                     columnNumber: 120
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35190,13 +35190,13 @@ const Body = ()=>{
                                                     checked: selectedSort == "deliveryTime"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 89,
+                                                    lineNumber: 87,
                                                     columnNumber: 216
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Body.js",
-                                            lineNumber: 89,
+                                            lineNumber: 87,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35209,12 +35209,12 @@ const Body = ()=>{
                                                         children: "Rating"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Body.js",
-                                                        lineNumber: 90,
+                                                        lineNumber: 88,
                                                         columnNumber: 140
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 90,
+                                                    lineNumber: 88,
                                                     columnNumber: 114
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35226,13 +35226,13 @@ const Body = ()=>{
                                                     checked: selectedSort == "rating"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 90,
+                                                    lineNumber: 88,
                                                     columnNumber: 167
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Body.js",
-                                            lineNumber: 90,
+                                            lineNumber: 88,
                                             columnNumber: 19
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35245,12 +35245,12 @@ const Body = ()=>{
                                                         children: "Cost For Two"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Body.js",
-                                                        lineNumber: 91,
+                                                        lineNumber: 89,
                                                         columnNumber: 148
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 91,
+                                                    lineNumber: 89,
                                                     columnNumber: 118
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35262,36 +35262,36 @@ const Body = ()=>{
                                                     checked: selectedSort == "costForTwo"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Body.js",
-                                                    lineNumber: 91,
+                                                    lineNumber: 89,
                                                     columnNumber: 181
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Body.js",
-                                            lineNumber: 91,
+                                            lineNumber: 89,
                                             columnNumber: 19
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 87,
+                                    lineNumber: 85,
                                     columnNumber: 17
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 77,
+                            lineNumber: 75,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 67,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 66,
+                lineNumber: 64,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35302,30 +35302,30 @@ const Body = ()=>{
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 106,
+                            lineNumber: 104,
                             columnNumber: 39
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 106,
+                            lineNumber: 104,
                             columnNumber: 70
                         }, undefined)
                     }, res?.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 104,
+                        lineNumber: 102,
                         columnNumber: 13
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 99,
+                lineNumber: 97,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 65,
-        columnNumber: 3
+        lineNumber: 63,
+        columnNumber: 11
     }, undefined);
 };
 _s(Body, "4xHdH25lRqj/TJr7KkfYzkBfm38=", false, function() {
@@ -35366,7 +35366,7 @@ const ResCard = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         to: `/res/${resData.id}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: " w-52 h-60 p-2 rounded-lg flex flex-col justify-between gap-1",
+            className: " mt-20 w-52 h-60 p-2 rounded-lg flex flex-col justify-between gap-1",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "rounded-lg",
@@ -40750,8 +40750,8 @@ var _reselect = require("reselect");
 // src/getDefaultMiddleware.ts
 var _reduxThunk = require("redux-thunk");
 var _reduxThunkDefault = parcelHelpers.interopDefault(_reduxThunk);
-var global = arguments[3];
 var process = require("97359878b6e7278a");
+var global = arguments[3];
 var __extends = undefined && undefined.__extends || function() {
     var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf || ({

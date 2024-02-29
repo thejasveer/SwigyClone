@@ -9,7 +9,7 @@ const ResCard = (props)=>{
     cuisines = (cuisines.length==20)?cuisines.concat("..."):cuisines;
  return (
     <Link to={  `/res/${resData.id}`} >
-     <div className='   w-52 h-60 p-2 rounded-lg flex flex-col justify-between gap-1'>
+     <div className='  mt-20 w-52 h-60 p-2 rounded-lg flex flex-col justify-between gap-1'>
         <img className='rounded-lg' src={CDN_URL+resData.cloudinaryImageId} />
         <h3 className='title text-xl text-black'>{name}</h3>
         <h4>{cuisines}</h4>
