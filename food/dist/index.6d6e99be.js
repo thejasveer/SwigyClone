@@ -2999,7 +2999,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App2.js",
-            lineNumber: 43,
+            lineNumber: 44,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3007,7 +3007,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App2.js",
-                    lineNumber: 47,
+                    lineNumber: 48,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3015,7 +3015,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App2.js",
-                    lineNumber: 51,
+                    lineNumber: 52,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3023,7 +3023,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/App2.js",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3034,14 +3034,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Contact, {}, void 0, false, {
                             fileName: "src/App2.js",
-                            lineNumber: 59,
+                            lineNumber: 60,
                             columnNumber: 57
                         }, undefined),
                         " "
                     ]
                 }, void 0, true, {
                     fileName: "src/App2.js",
-                    lineNumber: 59,
+                    lineNumber: 60,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3052,14 +3052,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResMenu, {}, void 0, false, {
                             fileName: "src/App2.js",
-                            lineNumber: 63,
+                            lineNumber: 64,
                             columnNumber: 58
                         }, undefined),
                         " "
                     ]
                 }, void 0, true, {
                     fileName: "src/App2.js",
-                    lineNumber: 63,
+                    lineNumber: 64,
                     columnNumber: 26
                 }, undefined)
             }
@@ -3069,14 +3069,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Error, {}, void 0, false, {
                     fileName: "src/App2.js",
-                    lineNumber: 66,
+                    lineNumber: 67,
                     columnNumber: 54
                 }, undefined),
                 " "
             ]
         }, void 0, true, {
             fileName: "src/App2.js",
-            lineNumber: 66,
+            lineNumber: 67,
             columnNumber: 22
         }, undefined)
     }
@@ -3086,7 +3086,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App2.js",
-    lineNumber: 71,
+    lineNumber: 72,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
@@ -27305,7 +27305,7 @@ var _usOnlineStatusDefault = parcelHelpers.interopDefault(_usOnlineStatus);
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
-    let [btnName, setBtnName] = (0, _react.useState)("Login");
+    let [btnName, setBtnName] = (0, _react.useState)("Signin");
     let [loggedIn, setLoggedIn] = (0, _react.useState)(false);
     const onlineStatus = (0, _usOnlineStatusDefault.default)();
     const { loggedInUser , setUserName  } = (0, _react.useContext)((0, _userContextDefault.default));
@@ -27318,7 +27318,7 @@ const Header = ()=>{
     const logoutUser = ()=>{
         setUserName("");
         setLoggedIn(false);
-        setBtnName("Login");
+        setBtnName("Signin");
     };
     const cart = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27350,7 +27350,7 @@ const Header = ()=>{
                 columnNumber: 11
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav_items",
+                className: "nav_items text-lg text-slate-600 gap-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27368,15 +27368,35 @@ const Header = ()=>{
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                     to: "/cart",
+                                    className: "flex gap-1",
                                     children: [
-                                        "\uD83D\uDED2  (",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            viewBox: "0 0 16 16",
+                                            fill: "currentColor",
+                                            className: "w-6 h-6",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                fillRule: "evenodd",
+                                                d: "M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z",
+                                                clipRule: "evenodd"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 43,
+                                                columnNumber: 3
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/components/Header.js",
+                                            lineNumber: 42,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        "(",
                                         cart.length,
                                         ")"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Header.js",
                                     lineNumber: 41,
-                                    columnNumber: 20
+                                    columnNumber: 21
                                 }, undefined)
                             ]
                         }, void 0, true, {
@@ -27386,22 +27406,41 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "auth",
+                                className: "auth flex",
                                 onClick: ()=>{
                                     loggedIn ? logoutUser() : loginNewUser();
                                 },
                                 children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 24 24",
+                                        fill: "currentColor",
+                                        className: "w-6 h-6",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                            fillRule: "evenodd",
+                                            d: "M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z",
+                                            clipRule: "evenodd"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Header.js",
+                                            lineNumber: 53,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 52,
+                                        columnNumber: 19
+                                    }, undefined),
                                     loggedIn ? loggedInUser + "," : "",
                                     btnName
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 45,
+                                lineNumber: 48,
                                 columnNumber: 20
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 45,
+                            lineNumber: 48,
                             columnNumber: 16
                         }, undefined)
                     ]
@@ -27422,7 +27461,7 @@ const Header = ()=>{
         columnNumber: 7
     }, undefined);
 };
-_s(Header, "yh7/QBj64C+bXu7t0egy940lBqw=", false, function() {
+_s(Header, "pMgpNUlp84rWuBJR1yInFT+JcHA=", false, function() {
     return [
         (0, _usOnlineStatusDefault.default),
         (0, _reactRedux.useSelector)
@@ -35050,29 +35089,33 @@ const Body = ()=>{
         setFilteredResList(sortedData);
         setSelectedSort(val);
     };
+    const emptySearchBar = ()=>{
+        setSearchInput("");
+        setFilteredResList(resList);
+    };
     const onlineStatus = (0, _usOnlineStatusDefault.default)();
     if (onlineStatus === false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "Looks like you are offline"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 59,
+        lineNumber: 64,
         columnNumber: 14
     }, undefined);
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 62,
+        lineNumber: 67,
         columnNumber: 34
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
+        className: "mt-20 mx-36",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter",
+                className: "flex justify-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-between pl-20 pr-20",
+                    className: " relative w-full ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            className: "border rounded-lg border-black p-2 ",
-                            placeholder: "Search",
+                            className: "border focus:outline-none border-grey-500 p-2 w-full",
+                            placeholder: "Search for restuarants...",
                             type: "text",
                             value: searchInput,
                             onChange: (e)=>{
@@ -35082,249 +35125,299 @@ const Body = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 66,
-                            columnNumber: 13
+                            lineNumber: 72,
+                            columnNumber: 17
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "relative",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    type: "button",
-                                    className: "cursor-pointer flex gap-2 text-green-500 p-2 border-1 border border-gray-200 rounded-lg",
-                                    onClick: ()=>{
-                                        setSortActive(!sortActive);
-                                    },
-                                    children: [
-                                        "SORT ",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            fill: "none",
-                                            viewBox: "0 0 24 24",
-                                            strokeWidth: 1.5,
-                                            stroke: "currentColor",
-                                            className: "w-6 h-6",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                strokeLinecap: "round",
-                                                strokeLinejoin: "round",
-                                                d: "M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
-                                            }, void 0, false, {
-                                                fileName: "src/components/Body.js",
-                                                lineNumber: 80,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 79,
-                                            columnNumber: 27
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 76,
-                                    columnNumber: 17
-                                }, undefined),
-                                sortActive && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                                    className: "absolute bg-white top-full rounded-md right-0 border py-2 px-6 space-y-2 shadow-lg z-10",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex items-center justify-between w-32",
-                                            onChange: (e)=>handleSort("relevence"),
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                                    htmlFor: "relevence",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        children: "Relevance"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/Body.js",
-                                                        lineNumber: 86,
-                                                        columnNumber: 145
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 86,
-                                                    columnNumber: 117
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    type: "radio",
-                                                    name: "sortBy",
-                                                    id: "relevance",
-                                                    className: "cursor-pointer w-3 h-3 rounded-full ",
-                                                    value: selectedSort,
-                                                    checked: selectedSort == "relevence"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 86,
-                                                    columnNumber: 175
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 86,
-                                            columnNumber: 19
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex items-center justify-between w-32",
-                                            onChange: (e)=>handleSort("deliveryTime"),
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                                    htmlFor: "delivertTime",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "whitespace-nowrap",
-                                                        children: "Delivery Time"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/Body.js",
-                                                        lineNumber: 87,
-                                                        columnNumber: 152
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 87,
-                                                    columnNumber: 120
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    type: "radio",
-                                                    name: "sortBy",
-                                                    id: "deliveryTime",
-                                                    className: "cursor-pointer w-3 h-3 rounded-full ",
-                                                    value: selectedSort,
-                                                    checked: selectedSort == "deliveryTime"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 87,
-                                                    columnNumber: 216
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 87,
-                                            columnNumber: 19
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex items-center justify-between w-32",
-                                            onChange: (e)=>handleSort("rating"),
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                                    htmlFor: "rating",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        children: "Rating"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/Body.js",
-                                                        lineNumber: 88,
-                                                        columnNumber: 140
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 88,
-                                                    columnNumber: 114
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    type: "radio",
-                                                    name: "sortBy",
-                                                    id: "rating",
-                                                    className: "cursor-pointer w-3 h-3 rounded-full ",
-                                                    value: selectedSort,
-                                                    checked: selectedSort == "rating"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 88,
-                                                    columnNumber: 167
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 88,
-                                            columnNumber: 19
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex items-center justify-between w-32",
-                                            onChange: (e)=>handleSort("costForTwo"),
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                                    htmlFor: "costForTwo",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        children: "Cost For Two"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/Body.js",
-                                                        lineNumber: 89,
-                                                        columnNumber: 148
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 89,
-                                                    columnNumber: 118
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                    type: "radio",
-                                                    name: "sortBy",
-                                                    id: "costForTwo",
-                                                    className: "cursor-pointer w-3 h-3 rounded-full ",
-                                                    value: selectedSort,
-                                                    checked: selectedSort == "costForTwo"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/Body.js",
-                                                    lineNumber: 89,
-                                                    columnNumber: 181
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 89,
-                                            columnNumber: 19
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 85,
-                                    columnNumber: 17
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
+                        !searchInput && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1.5,
+                            stroke: "currentColor",
+                            className: "w-6 h-6 absolute top-2 right-2 text-grey-500 text-slate-500",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                d: "m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 84,
+                                columnNumber: 19
+                            }, undefined)
+                        }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 75,
+                            lineNumber: 83,
+                            columnNumber: 19
+                        }, undefined) || /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            onClick: emptySearchBar,
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1.5,
+                            stroke: "currentColor",
+                            className: "w-6 h-6 absolute top-2 right-2 text-slate-500",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                d: "M6 18 18 6M6 6l12 12"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 89,
+                                columnNumber: 19
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 86,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 65,
-                    columnNumber: 9
+                    lineNumber: 71,
+                    columnNumber: 13
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 64,
-                columnNumber: 7
+                lineNumber: 69,
+                columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-center mb-16",
+                className: " relative flex justify-end mt-5",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        type: "button",
+                        className: "cursor-pointer flex gap-2 text-green-500 p-2 border-1 border border-gray-200 rounded-lg",
+                        onClick: ()=>{
+                            setSortActive(!sortActive);
+                        },
+                        children: [
+                            "SORT ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                strokeWidth: 1.5,
+                                stroke: "currentColor",
+                                className: "w-6 h-6",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    d: "M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
+                                }, void 0, false, {
+                                    fileName: "src/components/Body.js",
+                                    lineNumber: 105,
+                                    columnNumber: 19
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 104,
+                                columnNumber: 27
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 101,
+                        columnNumber: 17
+                    }, undefined),
+                    sortActive && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                        className: "absolute bg-white top-full rounded-md right-0 border py-2 px-6 space-y-2 shadow-lg z-10",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center justify-between w-32",
+                                onChange: (e)=>handleSort("relevence"),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        htmlFor: "relevence",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: "Relevance"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Body.js",
+                                            lineNumber: 111,
+                                            columnNumber: 145
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 111,
+                                        columnNumber: 117
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "radio",
+                                        name: "sortBy",
+                                        id: "relevance",
+                                        className: "cursor-pointer w-3 h-3 rounded-full ",
+                                        value: selectedSort,
+                                        checked: selectedSort == "relevence"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 111,
+                                        columnNumber: 175
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 111,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center justify-between w-32",
+                                onChange: (e)=>handleSort("deliveryTime"),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        htmlFor: "delivertTime",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "whitespace-nowrap",
+                                            children: "Delivery Time"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Body.js",
+                                            lineNumber: 112,
+                                            columnNumber: 152
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 112,
+                                        columnNumber: 120
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "radio",
+                                        name: "sortBy",
+                                        id: "deliveryTime",
+                                        className: "cursor-pointer w-3 h-3 rounded-full ",
+                                        value: selectedSort,
+                                        checked: selectedSort == "deliveryTime"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 112,
+                                        columnNumber: 216
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 112,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center justify-between w-32",
+                                onChange: (e)=>handleSort("rating"),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        htmlFor: "rating",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: "Rating"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Body.js",
+                                            lineNumber: 113,
+                                            columnNumber: 140
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 113,
+                                        columnNumber: 114
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "radio",
+                                        name: "sortBy",
+                                        id: "rating",
+                                        className: "cursor-pointer w-3 h-3 rounded-full ",
+                                        value: selectedSort,
+                                        checked: selectedSort == "rating"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 113,
+                                        columnNumber: 167
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 113,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center justify-between w-32",
+                                onChange: (e)=>handleSort("costForTwo"),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        htmlFor: "costForTwo",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: "Cost For Two"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Body.js",
+                                            lineNumber: 114,
+                                            columnNumber: 148
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 114,
+                                        columnNumber: 118
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "radio",
+                                        name: "sortBy",
+                                        id: "costForTwo",
+                                        className: "cursor-pointer w-3 h-3 rounded-full ",
+                                        value: selectedSort,
+                                        checked: selectedSort == "costForTwo"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 114,
+                                        columnNumber: 181
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 114,
+                                columnNumber: 19
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 110,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 100,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "mx-5 mb-10 font-bold text-xl text-slate-600 ",
+                children: "Popular Restuarants"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 119,
+                columnNumber: 11
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap gap-5 justify-center mb-16",
                 children: // resList.map(res=> <ResCard resData={res}/>)
                 filteredRes.map((res)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: res.info.avgRating > 4 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(OpenRes, {
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 104,
+                            lineNumber: 127,
                             columnNumber: 39
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardDefault.default), {
                             resData: res?.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 104,
+                            lineNumber: 127,
                             columnNumber: 70
                         }, undefined)
                     }, res?.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 102,
+                        lineNumber: 125,
                         columnNumber: 13
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 97,
+                lineNumber: 120,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 63,
+        lineNumber: 68,
         columnNumber: 11
     }, undefined);
 };
@@ -35358,7 +35451,7 @@ var _constants = require("../utils/constants");
 var _reactRouterDom = require("react-router-dom");
 const ResCard = (props)=>{
     const { resData  } = props;
-    let { name , cuisines , avgRating , sla , costForTwo  } = resData;
+    let { name , cuisines , avgRating , sla , costForTwo , locality , aggregatedDiscountInfoV3  } = resData;
     name = name.substring(0, 20);
     name = name.length == 20 ? name.concat("...") : name;
     cuisines = cuisines.join(", ").substring(0, 20);
@@ -35366,79 +35459,137 @@ const ResCard = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         to: `/res/${resData.id}`,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: " mt-20 w-52 h-60 p-2 rounded-lg flex flex-col justify-between gap-1",
+            className: " mb-20 w-80 h-80 p-2 rounded-lg flex flex-col justify-between gap-1 text-slate-600",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "rounded-lg",
-                    src: (0, _constants.CDN_URL) + resData.cloudinaryImageId
-                }, void 0, false, {
-                    fileName: "src/components/ResCard.js",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    className: "title text-xl text-black",
-                    children: name
-                }, void 0, false, {
-                    fileName: "src/components/ResCard.js",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    children: cuisines
-                }, void 0, false, {
-                    fileName: "src/components/ResCard.js",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex justify-between mb-0",
+                    className: "relative",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                            className: "bg-green-500 p-1 text-white rounded-md",
-                            children: [
-                                avgRating,
-                                " ⭐️ "
-                            ]
-                        }, void 0, true, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "rounded-lg",
+                            src: (0, _constants.CDN_URL) + resData.cloudinaryImageId
+                        }, void 0, false, {
                             fileName: "src/components/ResCard.js",
-                            lineNumber: 17,
-                            columnNumber: 9
+                            lineNumber: 15,
+                            columnNumber: 10
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "mx-2 p-2 rounded-md font-black font-2xl absolute bottom-2 text-white bg-black shadow-inner-2xl",
                             children: [
-                                "⏰ ",
-                                sla.deliveryTime,
-                                " mins"
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    children: aggregatedDiscountInfoV3?.header
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCard.js",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    children: aggregatedDiscountInfoV3?.subHeader
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCard.js",
+                                    lineNumber: 18,
+                                    columnNumber: 13
+                                }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ResCard.js",
-                            lineNumber: 19,
-                            columnNumber: 9
+                            lineNumber: 16,
+                            columnNumber: 5
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/ResCard.js",
-                    lineNumber: 16,
-                    columnNumber: 9
+                    lineNumber: 14,
+                    columnNumber: 7
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    className: "text-right",
-                    children: costForTwo
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    className: "title text-xl font-bold ",
+                    children: name
                 }, void 0, false, {
                     fileName: "src/components/ResCard.js",
-                    lineNumber: 21,
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex justify-between mb-0",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center gap-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-green-600 rounded-full p-1",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 16 16",
+                                    fill: "white",
+                                    className: "w-4 h-4",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        fillRule: "evenodd",
+                                        d: "M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z",
+                                        clipRule: "evenodd"
+                                    }, void 0, false, {
+                                        fileName: "src/components/ResCard.js",
+                                        lineNumber: 32,
+                                        columnNumber: 13
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ResCard.js",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/ResCard.js",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "font-semibold",
+                                children: [
+                                    " ",
+                                    avgRating,
+                                    " |   ",
+                                    sla.slaString,
+                                    " mins"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/ResCard.js",
+                                lineNumber: 36,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ResCard.js",
+                        lineNumber: 29,
+                        columnNumber: 10
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/ResCard.js",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "font-thin",
+                    children: cuisines
+                }, void 0, false, {
+                    fileName: "src/components/ResCard.js",
+                    lineNumber: 44,
+                    columnNumber: 10
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "font-thin",
+                    children: locality
+                }, void 0, false, {
+                    fileName: "src/components/ResCard.js",
+                    lineNumber: 45,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/ResCard.js",
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 6
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/ResCard.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined);
 };
@@ -35454,29 +35605,30 @@ const WithOpenLabel = (ResCard)=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     style: {
                         position: "absolute",
-                        background: "#000",
+                        background: "green",
                         color: "#fff",
                         top: "0",
                         padding: "5px",
-                        borderRadius: "5px"
+                        borderRadius: "5px",
+                        "z-index": "10"
                     },
                     children: "Promoted"
                 }, void 0, false, {
                     fileName: "src/components/ResCard.js",
-                    lineNumber: 37,
+                    lineNumber: 61,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResCard, {
                     resData: resData
                 }, void 0, false, {
                     fileName: "src/components/ResCard.js",
-                    lineNumber: 38,
+                    lineNumber: 62,
                     columnNumber: 13
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/ResCard.js",
-            lineNumber: 36,
+            lineNumber: 60,
             columnNumber: 10
         }, undefined);
     };

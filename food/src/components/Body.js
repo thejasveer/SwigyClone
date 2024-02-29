@@ -52,6 +52,11 @@ const Body = ()=>{
       setSelectedSort(val)
       
     }
+
+    const emptySearchBar= ()=>{
+      setSearchInput("");
+      setFilteredResList(resList)
+    }
     
     const onlineStatus = useOnlineStatus();
 
@@ -60,19 +65,39 @@ const Body = ()=>{
     }
    
     return (resList.length===0)? <Shimmer/> : (
-          <div className='body'>
-      <div className='filter'>
-        <div className='flex justify-between pl-20 pr-20'>
-            <input className="border rounded-lg border-black p-2  " placeholder="Search" type='text'  value={searchInput} onChange=   {(e)=>{
+          <div className='mt-20 mx-36'>
+            <div className='flex justify-center'>
+            
+            <div className='  relative w-full '>
+                <input className="border  focus:outline-none border-grey-500 p-2 w-full" placeholder="Search for restuarants..." type='text'  value={searchInput} onChange=   {(e)=>{
 
-                setSearchInput(e.target.value)
-                
-                filteredList =(e.target.value.length>0)? resList.filter((res)=> res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())):resList;
-                
-                  setFilteredResList(filteredList)
-                
-                }}/>
-                <div className="relative">
+                    setSearchInput(e.target.value)
+                    
+                    filteredList =(e.target.value.length>0)? resList.filter((res)=> res?.info?.name.toLowerCase().includes(searchInput.toLowerCase())):resList;
+                    
+                      setFilteredResList(filteredList)
+                    
+                    }}/>
+
+                  {!searchInput &&
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute top-2 right-2  text-grey-500 text-slate-500">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg> ||
+                <svg onClick={emptySearchBar
+                  
+                } xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute top-2 right-2  text-slate-500">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              
+                  }
+
+                      
+            </div>
+            
+      
+
+      </div>
+      <div className=" relative flex justify-end mt-5">
                 <button type="button" className="cursor-pointer flex gap-2 text-green-500  p-2 border-1 border border-gray-200 rounded-lg" 
                 onClick={()=>{
                    setSortActive(!sortActive)
@@ -90,11 +115,9 @@ const Body = ()=>{
                 </form>
                 }
                 </div>
-                   
-        </div>
 
-      </div>
-      <div className='flex flex-wrap  justify-center  mb-16'>
+          <h1 className="mx-5 mb-10 font-bold text-xl text-slate-600 ">Popular Restuarants</h1>      
+      <div className='flex flex-wrap gap-5 justify-center  mb-16'>
   
       {
           // resList.map(res=> <ResCard resData={res}/>)
@@ -109,7 +132,7 @@ const Body = ()=>{
       
        
       </div>
-  </div>
+        </div>
     ) 
   }
 
